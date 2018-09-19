@@ -1,4 +1,5 @@
 <?php
+// phpinfo();die pour voir les parametres php
 
 require_once 'functions.php';
 require_once 'model/database.php';
