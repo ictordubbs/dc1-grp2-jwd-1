@@ -4,3 +4,4 @@ config/parameters.php
 _psd/
 nbproject/
 admin/node_modules/
+uploads/

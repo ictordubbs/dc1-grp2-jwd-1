@@ -8,19 +8,19 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="<?php echo $siteadmin; ?>crud/photo/">
                                 <i class="fa fa-picture-o"></i>
                                 Photo
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo $siteadmin; ?>crud/categorie">
+                            <a class="nav-link" href="<?php echo $siteadmin; ?>crud/categorie/">
                                 <i class="fa fa-book"></i>
                                 Catégorie
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="<?php echo $siteadmin; ?>crud/tag/">
                                 <i class="fa fa-tags"></i>
                                 Tags
                             </a>

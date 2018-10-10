@@ -16,3 +16,28 @@ function getAllTagsByPhoto(int $id): array {
     
     return $stmt->fetchAll();
 }
+
+function insertTags(string $libelle) {
+    global $connection;
+    
+    $query = "INSERT INTO tag (libelle) VALUES (:libelle)";
+    
+    $stmt = $connection->prepare($query);
+    $stmt->bindParam(':libelle', $libelle);
+    $stmt->execute();
+    
+    return $stmt->fetch();
+}
+
+function updateTags(int $id, string $libelle) {
+    global $connection;
+    
+    $query = "UPDATE tag SET libelle = :libelle WHERE id = :id";
+    
+    $stmt = $connection->prepare($query);
+    $stmt->bindParam(':id', $id);
+    $stmt->bindParam(':libelle', $libelle);
+    $stmt->execute();
+    
+    return $stmt->fetch();
+}

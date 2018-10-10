@@ -1,7 +1,7 @@
 <?php 
 require_once '../../../model/database.php';
 
-$liste_categories = getAllEntities("categorie");
+$liste_tags = getAllEntities("tag");
 
 $error_msg = null;
 if (isset($_GET["errcode"])){
@@ -17,7 +17,7 @@ if (isset($_GET["errcode"])){
 
 require_once '../../layout/header.php'; ?>
 
-<h1>Gestion des catégories</h1>
+<h1>Gestion des Tags</h1>
 
 <a href="create.php" class="btn btn-primary">
     <i class="fa fa-plus"></i>
@@ -40,17 +40,17 @@ require_once '../../layout/header.php'; ?>
         </tr>
     </thead>
     <tbody>
-        <?php foreach ($liste_categories as $categorie) : ?>
+        <?php foreach ($liste_tags as $tag) : ?>
         <tr>
-            <td><?php echo $categorie["libelle"]; ?></td>
+            <td><?php echo $tag["libelle"]; ?></td>
             <td>
                 <div class="actions">
-                <a href="update.php?id=<?php echo $categorie["id"]; ?>" class="btn btn-warning">
+                <a href="update.php?id=<?php echo $tag["id"]; ?>" class="btn btn-warning">
                     <i class="fa fa-edit"></i>
                     Modifier
                 </a>
                 <form action="delete_query.php" method="POST">
-                    <input type="hidden" name="id" value="<?php echo $categorie["id"]; ?>">
+                    <input type="hidden" name="id" value="<?php echo $tag["id"]; ?>">
                     <button class="btn btn-danger">
                         <i class="fa fa-trash"></i>
                         Supprimer

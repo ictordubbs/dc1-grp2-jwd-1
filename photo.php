@@ -21,7 +21,7 @@ getHeader($photo["titre"], "Description page photo");
 
     <em><?php echo $photo["date_creation_format"]; ?></em>
     <h1><?php echo $photo["titre"]; ?></h1>
-    <img src="images/<?php echo $photo["img"]; ?>">
+    <img src="uploads/<?php echo $photo["img"]; ?>">
     
     <p>Nombre de likes : <?php echo $photo["nb_likes"]; ?></p>
     <p><?php echo $photo["description"]; ?></p>
